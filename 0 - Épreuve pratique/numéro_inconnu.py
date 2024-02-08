@@ -1,5 +1,6 @@
 # Auteur : Zacharie
 
+# sujet n10
 #exercice 1
 def maxliste(tab):
     """ list -> Int """
@@ -40,6 +41,8 @@ class Pile:
             self.valeurs.pop()
         
 
+
+
 def parenthesage(ch):
     """
     Str -> Bool
@@ -61,8 +64,8 @@ assert parenthesage('()') == True
 assert parenthesage(')(') == False
 assert parenthesage('((())())()') == True
 
-
-
+#sujet n29
+#Exercice 1
 
 class Arbre:
     def __init__(self, etiquette):
@@ -97,3 +100,20 @@ def hauteur(a):
             return g + 1
         else:
             return d + 1
+
+
+#Exercice 2
+def ajoute(indice, element, liste):
+    nbre_elts = len(liste)
+    L = [0 for i in range(nbre_elts + 1)]
+    if indice < nbre_elts:
+        for i in range(indice):
+            L[i] = liste[i]
+        L[-1] = element
+        for i in range(indice + 1, nbre_elts + 1):
+            L[i] = liste[i]
+    else:
+        for i in range(nbre_elts):
+            L[i] = liste|i]
+        L[-1] = element
+    return L
