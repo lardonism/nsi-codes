@@ -1,4 +1,4 @@
-def dec_to_bin(dec):
+def decimal(dec):
     """ int -> bin
         passe un decimal en binaire 
     """
@@ -6,10 +6,14 @@ def dec_to_bin(dec):
     while dec != 0:
         binaire += str(dec%2)
         dec = dec//2
-    binaire = [elm for elm in binaire]
+    binaire = int(binaire[::-1])#reverse la chaine de caractere
+    return binaire
+"""
+ALTERNATIVE ! 
+binaire = [elm for elm in binaire]
     binaire = [binaire[(len(binaire)-1) - i ] for i in range(len(binaire))]
     binaire = "".join(binaire)
-    return binaire
+"""
 
 
 
