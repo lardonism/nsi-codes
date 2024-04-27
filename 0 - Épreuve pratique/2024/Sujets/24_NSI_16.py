@@ -1,4 +1,4 @@
-def decimal(dec):
+def ecriture_binaire_entier_positif(dec):
     """ int -> bin
         passe un decimal en binaire 
     """
