@@ -18,12 +18,19 @@ class Expr:
     def infixe(self):
         """renvoie la représentation infixe de l'expression en
         chaine de caractères"""
-        s = ... 
+        s = self.valeur 
         if self.gauche is not None:
-            s = '(' + s + ... .infixe() 
+            s = '(' + s + self.infixe(self.gauche) 
         s = s + ... 
-        if ... is not None: 
-            s = s + ... + ... 
+        if self.droite is not None: 
+            s = s + self.infixe(self.droite) + ')'
         return s
 
 
+def delta(liste):
+    d = 0
+    l = []
+    for i in range(len(liste)):
+        l.append(liste[i]-d)
+        d = liste[i]
+    return l
