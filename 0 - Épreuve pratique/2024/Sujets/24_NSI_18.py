@@ -19,5 +19,4 @@ def chercher(tab, x, i, j): # Exercice 2
     elif tab[m] > x:
         return chercher(tab, x, i , m) 
     else:
-        return m 
-
+        return m
